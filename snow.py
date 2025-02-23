@@ -24,14 +24,14 @@ def print_screen():
 
 def roll_two_dice(a):
     a = int(a)
-    return randint(1, a) + randint(1, a)
+    return randint(1,a) + randint(1,a)
 
 def wind():
     if WIND["turns"] > 0:
         WIND["turns"] -= 1
     elif randint(1,15) == 8:
         WIND["turns"] = randint(3,5)
-        WIND["strength"] = randint(1,3) * choice(-1,-1)
+        WIND["strength"] = randint(1,3) * choice([-1, 1])
     else:
         WIND["strength"] = 0
 
