@@ -1,3 +1,16 @@
 # snowfall (old)
 
-terminal snowglobe
+the old core of a terminal snowglobe
+
+
+                        *
+         *
+                                        *
+                    *
+                                 *
+              *
+                                        *
+                     ___ 
+                    /___\
+                    |  ¤|
+        *           |[] |     *             *
