@@ -1,5 +1,6 @@
 import shutil, time
 from random import randint, choice
+from scenery import SCENERY
 
 
 COLCOUNT, LINECOUNT = shutil.get_terminal_size()
@@ -17,6 +18,9 @@ def reset_screen():
     for y in range(LINECOUNT):
         for x in range(COLCOUNT):
             SCREEN[y][x] = " "
+    if COLCOUNT > 10:
+        for char in SCENERY:
+            SCREEN[LINECOUNT-1-char["y"]][char["x"]+int(COLCOUNT/2)-4] = char["c"]
 
 def print_screen():
     for y in range(LINECOUNT):
@@ -39,7 +43,7 @@ def wind():
 class Flake:
     def __init__(self, startx):
         self.shape = "*"
-        if randint(1,20) == 20:
+        if randint(1,25) == 25:
             self.shape = "#"
         self.posx = startx
         self.posy = 0
