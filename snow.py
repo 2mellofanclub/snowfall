@@ -23,8 +23,10 @@ def reset_screen():
             SCREEN[LINECOUNT-1-char["y"]][char["x"]+int(COLCOUNT/2)-4] = char["c"]
 
 def print_screen():
+    s = ""
     for y in range(LINECOUNT):
-        print("".join(SCREEN[y]))
+        s = s + "".join(SCREEN[y]) + "\n"
+    print(s)
 
 def roll_two_dice(a):
     a = int(a)
